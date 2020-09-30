@@ -5,3 +5,6 @@ Aplicativo para agendamento de test-drive de veículos, baseado no curso de mult
 
 ## Status do Projeto
 Em Desenvolvimento
+
+## Tecnologis Utilizadas
+- [Xamarin](https://docs.microsoft.com/pt-br/xamarin/)
