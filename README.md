@@ -11,4 +11,4 @@ Em Desenvolvimento
 
 ### Pré-Requisitos
 Primeiramenter ter o [Git](https://git-scm.com/downloads) instalado, para fazer o clone deste repositório.
-Veja [aqui](https://docs.microsoft.com/pt-br/xamarin/cross-platform/get-started/requirements#:~:text=Para%20desenvolver%20aplicativos%20do%20Xamarin,recomend%C3%A1vel%20o%20Visual%20Studio%202019.) os requisitos para rodar a aplicação, de acordo com seu sistema operacional.
+Veja [aqui](https://docs.microsoft.com/pt-br/xamarin/cross-platform/get-started/requirements) os requisitos para rodar a aplicação, de acordo com seu sistema operacional.
