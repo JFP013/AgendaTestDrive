@@ -5,7 +5,7 @@
 - [Descrição do Projeto](#descrição-do-projeto)
 - [Status do Projeto](#status-do-projeto)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Pré-Requisitos](pre-requisitos)
+- [Pré-Requisitos](pré-requisitos)
 
 ## Descrição do Projeto 
 Aplicativo para agendamento de test-drive de veículos, baseado no curso de multiplataforma mobile Xamarin da [Alura](https://www.alura.com.br/)
