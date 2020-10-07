@@ -11,7 +11,7 @@
 Aplicativo para agendamento de test-drive de veículos, baseado no curso de multiplataforma mobile Xamarin da [Alura](https://www.alura.com.br/)
 
 ## Status do Projeto
-Em Desenvolvimento
+:construction: Em Desenvolvimento :construction:
 
 ## Tecnologias Utilizadas
 - [Xamarin](https://docs.microsoft.com/pt-br/xamarin/)
