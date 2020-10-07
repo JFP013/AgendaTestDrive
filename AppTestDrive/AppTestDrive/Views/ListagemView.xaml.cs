@@ -11,15 +11,9 @@ namespace AppTestDrive.Views
 {
     public partial class ListagemView : ContentPage
     {
-        public List<Veiculo> Veiculos { get; set; }
-
         public ListagemView()
         {
             InitializeComponent();
-
-            Veiculos = new ListagemVeiculos().Veiculos;
-
-            BindingContext = this;
         }
 
         private void listViewVeiculo_ItemTapped(object sender, ItemTappedEventArgs e)
