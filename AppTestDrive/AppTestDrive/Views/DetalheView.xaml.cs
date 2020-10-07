@@ -27,45 +27,43 @@ namespace AppTestDrive.Views
             get { return String.Format("MP3 Player - R$ {0}", Veiculo.valorMP3); } 
         }
 
-        private bool _freioLigado;
+        
         public bool FreioLigado { 
             get 
             {
-                return _freioLigado;
+                return Veiculo.FreioLigado;
             } 
             set 
             {
-                _freioLigado = value;
+                Veiculo.FreioLigado = value;
                 OnPropertyChanged();
                 OnPropertyChanged(nameof(ValorTotal));
             } 
         }
 
-        private bool _arCondicionadoLigado;
         public bool ArCondicionadoLigado
         {
             get
             {
-                return _arCondicionadoLigado;
+                return Veiculo.ArCondicionadoLigado;
             }
             set
             {
-                _arCondicionadoLigado = value;
+                Veiculo.ArCondicionadoLigado = value;
                 OnPropertyChanged();
                 OnPropertyChanged(nameof(ValorTotal));
             }
         }
 
-        private bool _mp3Ligado;
         public bool MP3Ligado
         {
             get
             {
-                return _mp3Ligado;
+                return Veiculo.MP3Ligado;
             }
             set
             {
-                _mp3Ligado = value;
+                Veiculo.MP3Ligado = value;
                 OnPropertyChanged();
                 OnPropertyChanged(nameof(ValorTotal));
             }
@@ -75,7 +73,7 @@ namespace AppTestDrive.Views
         {
             get
             {
-                return String.Format(GetDescricaoValorTotal() , GetValorTotal());
+                return Veiculo.ValorTotalFormatado;
             }
         }
 
@@ -89,16 +87,6 @@ namespace AppTestDrive.Views
         private void BtnProximo_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new AgendamentoView(Veiculo));
-        }
-
-        public string GetDescricaoValorTotal()
-        {
-            return "Valor Total R$ {0} ";
-        }
-
-        public decimal GetValorTotal()
-        {
-            return Veiculo.Valor + (_freioLigado ? Veiculo.valorFreio : 0) + (_arCondicionadoLigado ? Veiculo.valorArCondicionado : 0) + (_mp3Ligado ? Veiculo.valorMP3 : 0);
         }
     }
 }

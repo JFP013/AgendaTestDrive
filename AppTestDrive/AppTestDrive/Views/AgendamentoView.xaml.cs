@@ -13,40 +13,95 @@ namespace AppTestDrive.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AgendamentoView : ContentPage
     {
-        public Veiculo Veiculo { get; set; }
-        public string Nome { get; set; }
-        public string Fone { get; set; }
-        public string Email { get; set; }
+        public Agendamento Agendamento { get; set; }
 
-        private DateTime _data = DateTime.Today;
+        public Veiculo Veiculo 
+        {
+            get 
+            {
+                return Agendamento.Veiculo;
+            }
+            set 
+            {
+                Agendamento.Veiculo = value;
+            } 
+        }
+        public string Nome { 
+            get 
+            {
+                return Agendamento.Nome;
+            }
+            set 
+            {
+                Agendamento.Nome = value;
+            } 
+        }
+
+        public string Fone 
+        { 
+            get
+            {
+                return Agendamento.Fone;
+            }
+            set
+            {
+                Agendamento.Fone = value;
+            } 
+        }
+
+        public string Email 
+        {
+            get 
+            {
+                return Agendamento.Email;
+            } 
+            set 
+            {
+                Agendamento.Email = value;
+            } 
+        }
+
         public DateTime Data 
         {
             get 
             {
-                return _data;
+                return Agendamento.Data;
             }
             set 
             {
-                _data = value;
+                Agendamento.Data = value;
             } 
         }
-        public TimeSpan Hora { get; set; }
+        public TimeSpan Hora 
+        {
+            get 
+            {
+                return Agendamento.Hora;
+            }
+            set 
+            {
+                Agendamento.Hora = value;
+            } 
+        }
 
         public AgendamentoView(Veiculo veiculo)
         {
             InitializeComponent();
-            Veiculo = veiculo;
+            Agendamento = new Agendamento();
+            Agendamento.Veiculo = veiculo;
             BindingContext = this;
         }
 
         private void btnAgendar_Clicked(object sender, EventArgs e)
         {
             DisplayAlert("Agendamento",
-                String.Format(@"Nome: {0}
-Fone: {1}
-E-Mail: {2}
-Data: {3}
-Hora {4}", 
+                String.Format(@"Veiculo: {0}
+Nome: {1}
+Fone: {2}
+E-Mail: {3}
+Data: {4}
+Hora {5}", 
+Veiculo.Nome,
 Nome , 
 Fone, 
 Email, 
