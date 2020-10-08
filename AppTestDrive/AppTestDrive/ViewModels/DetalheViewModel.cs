@@ -78,14 +78,13 @@ namespace AppTestDrive.ViewModels
         public DetalheViewModel(Veiculo veiculo)
         {
             Veiculo = veiculo;
-
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
         public void OnPropertyChanged([CallerMemberName]string name = "")
         {
-            PropertyChanged.Invoke(this, new PropertyChangedEventArgs(name));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
     }
 }

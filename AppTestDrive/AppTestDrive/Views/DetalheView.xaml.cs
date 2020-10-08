@@ -18,6 +18,7 @@ namespace AppTestDrive.Views
         public DetalheView(Veiculo veiculo)
         {
             InitializeComponent();
+            Veiculo = veiculo;
             BindingContext = new DetalheViewModel(veiculo);
         }
 

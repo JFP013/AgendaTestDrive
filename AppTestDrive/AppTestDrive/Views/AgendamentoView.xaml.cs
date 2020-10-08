@@ -1,4 +1,5 @@
 ﻿using AppTestDrive.Models;
+using AppTestDrive.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,83 +14,13 @@ namespace AppTestDrive.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AgendamentoView : ContentPage
     {
-        public Agendamento Agendamento { get; set; }
-
-        public Veiculo Veiculo 
-        {
-            get 
-            {
-                return Agendamento.Veiculo;
-            }
-            set 
-            {
-                Agendamento.Veiculo = value;
-            } 
-        }
-        public string Nome { 
-            get 
-            {
-                return Agendamento.Nome;
-            }
-            set 
-            {
-                Agendamento.Nome = value;
-            } 
-        }
-
-        public string Fone 
-        { 
-            get
-            {
-                return Agendamento.Fone;
-            }
-            set
-            {
-                Agendamento.Fone = value;
-            } 
-        }
-
-        public string Email 
-        {
-            get 
-            {
-                return Agendamento.Email;
-            } 
-            set 
-            {
-                Agendamento.Email = value;
-            } 
-        }
-
-        public DateTime Data 
-        {
-            get 
-            {
-                return Agendamento.Data;
-            }
-            set 
-            {
-                Agendamento.Data = value;
-            } 
-        }
-        public TimeSpan Hora 
-        {
-            get 
-            {
-                return Agendamento.Hora;
-            }
-            set 
-            {
-                Agendamento.Hora = value;
-            } 
-        }
+        public AgendamentoViewModel ViewModel { get; set; }
 
         public AgendamentoView(Veiculo veiculo)
         {
             InitializeComponent();
-            Agendamento = new Agendamento();
-            Agendamento.Veiculo = veiculo;
-            BindingContext = this;
+            ViewModel = new AgendamentoViewModel(veiculo);
+            BindingContext = ViewModel;
         }
 
         private void btnAgendar_Clicked(object sender, EventArgs e)
@@ -100,13 +31,13 @@ Nome: {1}
 Fone: {2}
 E-Mail: {3}
 Data: {4}
-Hora {5}", 
-Veiculo.Nome,
-Nome , 
-Fone, 
-Email, 
-Data.ToString("dd/MM/yyyy"),
-Hora),
+Hora {5}",
+ViewModel.Agendamento.Veiculo.Nome,
+ViewModel.Agendamento.Nome ,
+ViewModel.Agendamento.Fone,
+ViewModel.Agendamento.Email,
+ViewModel.Agendamento.Data.ToString("dd/MM/yyyy"),
+ViewModel.Agendamento.Hora),
                 "OK");
         }
     }
