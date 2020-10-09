@@ -7,22 +7,17 @@
 - [Plataformas Testadas](#plataformas-testadas)
 - [Pré-Requisitos](#pré-requisitos)
 
-
 ## Descrição do Projeto 
 Aplicativo de agendamento para test-drive de veículos, baseado no curso de multiplataforma mobile Xamarin da [Alura](https://www.alura.com.br/)
-
 
 ## Status do Projeto
 :construction: Em Desenvolvimento :construction:
 
-
 ## Tecnologias Utilizadas
 - [Xamarin](https://docs.microsoft.com/pt-br/xamarin/)
 
-
 ## Plataformas Testadas
 - Android
-
 
 ## Pré-Requisitos
 - Primeiramenter ter o [Git](https://git-scm.com/downloads) instalado, para fazer o clone deste repositório.
