@@ -1,10 +1,10 @@
 <h1 align = "center"> AgendaTestDrive</h1>
 
-# Indice
-
+## Indice
 - [Descrição do Projeto](#descrição-do-projeto)
 - [Status do Projeto](#status-do-projeto)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Plataformas Testadas](#plataformas-testadas)
 - [Pré-Requisitos](#pré-requisitos)
 
 ## Descrição do Projeto 
@@ -15,6 +15,9 @@ Aplicativo de agendamento para test-drive de veículos, baseado no curso de mult
 
 ## Tecnologias Utilizadas
 - [Xamarin](https://docs.microsoft.com/pt-br/xamarin/)
+
+## Plataformas Testadas
+- Android
 
 ## Pré-Requisitos
 - Primeiramenter ter o [Git](https://git-scm.com/downloads) instalado, para fazer o clone deste repositório.
