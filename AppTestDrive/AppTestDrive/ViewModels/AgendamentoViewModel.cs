@@ -2,12 +2,16 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace AppTestDrive.ViewModels
 {
     public class AgendamentoViewModel
     {
         public Agendamento Agendamento { get; set; }
+
+        public ICommand Agendar { get; set; }
 
         public Veiculo Veiculo
         {
@@ -83,6 +87,11 @@ namespace AppTestDrive.ViewModels
         {
             Agendamento = new Agendamento();
             Agendamento.Veiculo = veiculo;
+
+            Agendar = new Command(() =>
+            {
+                MessagingCenter.Send(Agendamento, "Agendamento");
+            });
         }
     }
 }
