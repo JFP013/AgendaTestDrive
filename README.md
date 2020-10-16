@@ -18,6 +18,7 @@ Aplicativo de agendamento para test-drive de veículos, baseado no curso de mult
 
 ## Plataformas Testadas
 - Android
+- UWP (Plataforma Universal do Windows)
 
 ## Pré-Requisitos
 - Primeiramenter ter o [Git](https://git-scm.com/downloads) instalado, para fazer o clone deste repositório.
